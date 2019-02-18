@@ -1,0 +1,16 @@
+stages:
+    - build
+
+build:
+  stage: build
+  image: docker:latest
+  variables:
+    DOCKER_DRIVER: overlay2
+
+  script:
+    - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL
+    - docker build -t $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG . 
+    - docker push $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG
+  when: always
+
+
