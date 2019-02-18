@@ -1,5 +1,6 @@
 stages:
     - build
+    - deploy
 
 build:
   stage: build
@@ -12,10 +13,17 @@ build:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL
     - docker build -t $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG . 
     - docker push $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG
+
+deploy:
+  image: ruby:latest
+  stage: deploy
+  script:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
     - dpl --provider=heroku --app=ayushojha --api-key=$REGISTRY_PASSWORD
+  only:
+  - master
   when: always
 
 
