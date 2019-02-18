@@ -14,6 +14,7 @@ build:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL
     - docker build -t $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG . 
     - docker push $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG
+    - dpl --provider=heroku --app=ayushojha --api-key=$REGISTRY_PASSWORD
   when: always
 
 
