@@ -1,4 +1,5 @@
 stages:
+    - build-public
     - build
     - deploy
 
@@ -13,6 +14,18 @@ build:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL
     - docker build -t $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG . 
     - docker push $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG
+
+build-public:
+  stage: build-public
+  image: docker:latest
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - name: docker:dind
+  script:
+    - docker login -u $REGISTRY_HUB_USER -p $REGISTRY_HUB_PASSWORD
+    - docker build -t ayojha/portfolio-ayush:$CI_COMMIT_REF_SLUG . 
+    - docker push ayojha/portfolio-ayush:$CI_COMMIT_REF_SLUG
 
 deploy:
   image: ruby:latest
