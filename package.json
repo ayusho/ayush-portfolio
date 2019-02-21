@@ -9,6 +9,7 @@
     "client": "npm run start --prefix client",
     "build": "npm run build --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prestart":"npm run build --prefix client",
     "start": "node server.js"
   },
   "author": "",
