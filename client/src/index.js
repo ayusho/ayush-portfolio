@@ -1,5 +1,6 @@
 import M from 'materialize-css'; // It installs the JS asset only
 import 'materialize-css/dist/css/materialize.min.css';
+import './assets/styles/index.css';
 import './components/common/commonStyle.css';
 import React from 'react';
 import { BrowserRouter as Router} from "react-router-dom";

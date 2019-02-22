@@ -17,7 +17,7 @@ class Header extends React.Component {
                 <div>
                     <nav className="nav-wrapper white header">
                         <a href="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></a>
-                        <Link to="/" className="brand-logo center">Ayush Ojha</Link>
+                        <Link to="/" className="brand-logo center logo"><p>AYUSH OJHA</p></Link>
 
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to="/about">About</Link></li>
