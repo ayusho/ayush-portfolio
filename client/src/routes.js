@@ -10,6 +10,7 @@ import Technologies from './components/Technologies/Technologies';
 import Achievements from './components/Achievements/Achievements';
 import Contact from './components/Contact/Contact';
 import Blog from './components/Blog/Blog';
+import Resume from './components/Resume/Resume';
 
 export default (
     <Router>
@@ -24,6 +25,8 @@ export default (
             <Route path="/about" exact component={About} />
             <Route path="/blog" exact component={Blog} />
             <Route path="/contact" exact component={Contact} />
+            <Route path="/resume" exact component={Resume} />
+
 
 
 

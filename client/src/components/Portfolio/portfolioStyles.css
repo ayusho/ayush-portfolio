@@ -3,3 +3,25 @@
     height: 200px;
 }
 
+.portfolio-card{
+    box-sizing: inherit;
+    padding: 2rem;
+}
+
+.portfolio-header {
+    
+}
+
+.card {
+    font-size: 2vmin;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-image {
+        flex: 1;
+    }
+}

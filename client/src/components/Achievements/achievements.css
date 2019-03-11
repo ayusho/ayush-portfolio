@@ -1,0 +1,17 @@
+.carousal-container {
+
+}
+
+.carousel {
+    height: 100%;
+    overflow: auto;
+}
+
+.achievementCards{
+    float: left
+}
+
+.card-title {
+    font-family: inherit;
+    font-size: 2em
+}

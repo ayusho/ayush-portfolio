@@ -1,0 +1,26 @@
+.upper-div {
+    padding: 5rem 1.5rem;
+    height: 500px
+}
+
+.contact-main {
+    color: #fff;
+}
+
+footer {
+    background-color: #8C43FF;
+    color: #fff;
+    padding: 0rem 1.5rem 4rem;
+    text-align: center
+}
+
+.bottom-div {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.social-network {
+    width: 50px;
+    height: 50px
+}

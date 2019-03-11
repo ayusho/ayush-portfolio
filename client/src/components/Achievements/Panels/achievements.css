@@ -1,0 +1,18 @@
+.carousal-container {
+        height: 100%;
+        height: -moz-available;          /* WebKit-based browsers will ignore this. */
+        height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+        height: fill-available;
+}
+
+.achievement-images {
+    width: 200px;
+    height: auto;
+    float: left;
+    padding: 40px;
+    margin: 0px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}

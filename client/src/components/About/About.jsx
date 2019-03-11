@@ -24,7 +24,7 @@ class About extends React.Component {
                 <div className="intro-container">
                     <div className="intro-container-div">
                     <div >
-                        <h2 className="header">Hello, I am Ayush</h2>
+                        <h2 className="header-class">Hello, I am Ayush</h2>
                     </div>
                     <div className="intro-text">
                         <h5>I am currently working at Sopra Steria as a Full Stack Developer. I have also worked on Docker Technologies and Cloud. I am a curious person by nature, and I look for perfection. I have an eye for marketing and I love dancing.</h5>
@@ -59,7 +59,7 @@ class About extends React.Component {
                                 <div className="">
                                     <img src={require("../../assets/skills/backend.png")}></img>
                                     <h5 className="role">Backend developer</h5>
-                                    <p>A User Interface is not enough when you have a lot of data to bring to the app. I love bring life to the web app by creating web services that can fill our web app with data it needs to stay alive.</p>
+                                    <p>A User Interface is not enough when you have a lot of data to bring to the app. I love bringing life to the web app by creating web services that can fill our web app with data it needs to stay alive.</p>
                                 </div>
                                 <div>
                                     <h5>Stack I use</h5>
