@@ -11,9 +11,9 @@ build-azure:
   services:
     - name: docker:dind
   script:
-    - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL
-    - docker build -t $REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG . 
-    - docker push $REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG
+    - docker login -u $AZURE_REGISTRY_USER -p $AZURE_REGISTRY_PASSWORD $AZURE_REGISTRY_URL
+    - docker build -t $AZURE_REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG . 
+    - docker push $AZURE_REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG
 
 
 build:
