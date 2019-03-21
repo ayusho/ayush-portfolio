@@ -1,8 +1,7 @@
 stages:
     - build-azure
-    - build-public
-    - build
-    - deploy
+    - build-redhat
+
 build-azure:
   stage: build
   image: docker:latest
@@ -15,5 +14,16 @@ build-azure:
     - docker build -t $AZURE_REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG . 
     - docker push $AZURE_REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG
 
+build-redhat:
+  stage: build
+  image: docker:latest
+  variables:
+    DOCKER_DRIVER: overlay2
+  services:
+    - name: docker:dind
+  script:
+    - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD $REGISTRY_URL
+    - docker build -t $REGISTRY_URL/$REGISTRY_NAMESPACE/ayush-portfolio:$CI_COMMIT_REF_SLUG . 
+    - docker push $REGISTRY_URL/$REGISTRY_NAMESPACE/portfolio:$CI_COMMIT_REF_SLUG
 
 
