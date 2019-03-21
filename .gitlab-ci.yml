@@ -3,7 +3,7 @@ stages:
     - build-redhat
 
 build-azure:
-  stage: build
+  stage: build-azure
   image: docker:latest
   variables:
     DOCKER_DRIVER: overlay2
@@ -15,7 +15,7 @@ build-azure:
     - docker push $AZURE_REGISTRY_URL/portfolio:$CI_COMMIT_REF_SLUG
 
 build-redhat:
-  stage: build
+  stage: build-redhat
   image: docker:latest
   variables:
     DOCKER_DRIVER: overlay2
