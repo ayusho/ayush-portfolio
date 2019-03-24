@@ -1,36 +1,19 @@
 import React from "react";
-import axios from "axios";
-import { saveAs } from 'file-saver';
 
+import './resumeStyles.css';
 
 class Resume extends React.Component {
+  
   componentDidMount() {
-    if (window.confirm('Do you want to download the resume?')) {
-      axios.get('/api/resume', {
-        responseType: 'blob'
-      })
-        .then((response) => {
-          console.log(response);
-          const blob = new Blob([response.data], {
-            type: 'application/pdf',
-          });
-          var url = URL.createObjectURL(blob);
-          saveAs(url, 'resume.pdf');
-        })
-        .catch(err => {
-          console.log(err);
-        })
+    if (window.confirm('This page will redirect you to the new tab.')) {
+          window.open(require('../../assets/resume/resume.pdf'));
     }
-    else {
-
-    }
-
-
   }
 
   render() {
     return (
-      <div>
+      <div className="heading">
+        <h5>Refresh this page to download again.</h5>
       </div>
     );
   }
