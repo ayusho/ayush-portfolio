@@ -1,14 +1,33 @@
 import React from "react";
+import axios from "axios";
+import { saveAs } from 'file-saver';
 
-// import { Document,pdfjs } from 'react-pdf';
 
- 
 class Resume extends React.Component {
-  state = {
-    numPages: null,
-    pageNumber: 1,
+  componentDidMount() {
+    if (window.confirm('Do you want to download the resume?')) {
+      axios.get('/api/resume', {
+        responseType: 'blob'
+      })
+        .then((response) => {
+          console.log(response);
+          const blob = new Blob([response.data], {
+            type: 'application/pdf',
+          });
+          var url = URL.createObjectURL(blob);
+          saveAs(url, 'resume.pdf');
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    }
+    else {
+
+    }
+
+
   }
- 
+
   render() {
     return (
       <div>

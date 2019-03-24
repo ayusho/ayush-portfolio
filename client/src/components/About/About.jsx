@@ -24,10 +24,10 @@ class About extends React.Component {
                 <div className="intro-container">
                     <div className="intro-container-div">
                     <div >
-                        <h2 className="header-class">Hello, I am Ayush</h2>
+                        <h2 className="header-class">Hello, I am Ayush!</h2>
                     </div>
                     <div className="intro-text">
-                        <h5>I am currently working at Sopra Steria as a Full Stack Developer. I have also worked on Docker Technologies and Cloud. I am a curious person by nature, and I look for perfection. I have an eye for marketing and I love dancing.</h5>
+                        <h5>I am currently working at Sopra Steria as a Full Stack Developer. I have also worked on Docker Technologies and Cloud. Being curious is my nature, and that helps me keep learning.</h5>
                     </div>
                     </div>
 
@@ -81,7 +81,7 @@ class About extends React.Component {
                                 <div className="">
                                     <img src={require("../../assets/skills/database.png")}></img>
                                     <h5 className="role">Database</h5>
-                                    <p>A web app without data is like me without cheeze burgers. Database is the heart of the application and it is necessary if your application is data intensive.</p>
+                                    <p>A web app without data is like me without dancing (I just love dancing). Database is the heart of the application and it is necessary if your application is data intensive.</p>
                                 </div>
                                 <div>
                                     <h5>Stack I use</h5>

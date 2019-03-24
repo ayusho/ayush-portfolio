@@ -1,26 +1,28 @@
-.upper-div {
-    padding: 5rem 1.5rem;
-    height: 500px
+
+.contact-form {
+
 }
 
-.contact-main {
-    color: #fff;
+.contact-form > p {
+    font-size: xx-large;
+    text-align: center;
 }
 
-footer {
-    background-color: #8C43FF;
-    color: #fff;
-    padding: 0rem 1.5rem 4rem;
+.contact-footer > h5, .contact-footer > div {
     text-align: center
 }
 
-.bottom-div {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
+.social {
+    padding: 5px;
+    margin: 5px;
 }
 
-.social-network {
-    width: 50px;
-    height: 50px
+.social:hover {
+    transform: scale(1.5);
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.input-field {
+    margin: 2em;
 }

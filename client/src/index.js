@@ -6,9 +6,17 @@ import React from 'react';
 import { BrowserRouter as Router} from "react-router-dom";
 import ReactDOM from 'react-dom';
 
-
 import routes from './routes';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee, faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 import * as serviceWorker from './serviceWorker';
+
+library.add(fab, faCheckSquare, faCoffee, faFacebook, faInstagram)
+
+
 
 M.AutoInit();
 

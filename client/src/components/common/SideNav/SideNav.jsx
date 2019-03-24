@@ -23,15 +23,15 @@ class SideNav extends React.Component {
                         <a href="#name"><span className="white-text name">Ayush Ojha</span></a>
                         <a href="#email"><span className="white-text email">ayushojha@gmail.com</span></a>
                     </div></li>
-                    <li><Link to="/about"><i className="material-icons">person_pin</i>About</Link></li>
-                    <li><Link to="/portfolio"><i className="material-icons">assignment</i>Portfolio</Link></li>
-                    <li><Link to="/technologies"><i className="material-icons">build</i>Technologies</Link></li>
-                    <li><Link to="/education"><i className="material-icons">school</i>Education</Link></li>
-                    <li><Link to="/achievements"><i className="material-icons">flag</i>Achievements</Link></li>
+                    <li className="sidenav-close"><Link to="/about"><i className="material-icons">person_pin</i>About</Link></li>
+                    <li className="sidenav-close"><Link to="/portfolio"><i className="material-icons">assignment</i>Portfolio</Link></li>
+                    <li className="sidenav-close"><Link to="/technologies"><i className="material-icons">build</i>Technologies</Link></li>
+                    <li className="sidenav-close"><Link to="/education"><i className="material-icons">school</i>Education</Link></li>
+                    <li className="sidenav-close"><Link to="/achievements"><i className="material-icons">flag</i>Achievements</Link></li>
                     <li><div className="divider"></div></li>
                     <li><Link to="" className="subheader">Other</Link></li>
-                    <li><Link to="/resume" className="waves-effect">Resume</Link></li>
-                    <li><Link to="/blog" className="waves-effect">Personal Blog</Link></li>
+                    <li className="sidenav-close"><Link to="/resume" className="waves-effect">Resume</Link></li>
+                    <li className="sidenav-close"><Link to="/blog" className="waves-effect">Personal Blog</Link></li>
                 </ul>
             </div>
         );

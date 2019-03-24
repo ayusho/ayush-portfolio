@@ -9,6 +9,11 @@ app.use(express.static(path.join(__dirname, 'client','build')));
 app.get('/ping', function (req, res) {
  return res.send('pong');
 });
+
+app.get('/api/resume', function (req, res) {
+  res.send(path.join(__dirname, 'client/src/assets/resume', 'resume.pdf'));
+});
+
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
